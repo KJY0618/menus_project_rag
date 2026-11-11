@@ -1,0 +1,11 @@
+# requirements.txt  를 작성 한 후 다음 명령어로 프로그램을 설치합니다.
+# 설치 하기전에는 pip를 최선버전으로 업그레이드 합니다. 아래에 있어요
+# pip install -r requirements.txt
+# pip 명령어는 프로그램 설치 명령어
+
+# 아래코드는  pip 명령어를 최신 버전으로 업그레이드 하시오.
+# python.exe -m pip install --upgrade pip  
+
+# FastAPI 실행
+# uvicorn main:a --host 0.0.0.0 --port 8000 --reload
+#                     

@@ -1,0 +1,36 @@
+# =========================
+# Python Backend
+# =========================
+fastapi==0.110.0
+uvicorn==0.28.0
+pydantic>=2.6.4
+
+# =========================
+# Data Processing
+# =========================
+pandas>=2.2.0
+
+# =========================
+# LangChain 0.3.x Ecosystem
+# =========================
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-google-genai>=2.0.0 # 구글 LLM을 사용하기 위한 프로그램 
+langchain-community>=0.3.0
+langchain-chroma>=0.1.4
+langchain-huggingface>=0.1.0
+
+# =========================
+# Vector Database
+# =========================
+chromadb>=0.5.0
+faiss-cpu>=1.8.0
+
+# =========================
+# HuggingFace & Machine Learning
+# 개발자는 gitHub, 인공지능에서 HuggingFace
+# 트랜스포머로 만들어진 모델 사용
+# =========================
+sentence-transformers>=3.0.0
+transformers>=4.40.0
+huggingface-hub>=0.23.0 

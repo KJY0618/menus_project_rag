@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "name": "제주도",
+    "country": "한국",
+    "description": "아름다운 해변과 한라산, 다양한 자연경관을 즐길 수 있는 섬",
+    "recommendation": 99
+  },
+  {
+    "id": 2,
+    "name": "경복궁",
+    "country": "한국",
+    "description": "조선 시대의 역사와 전통 건축미를 느낄 수 있는 서울의 대표 궁궐",
+    "recommendation": 96
+  },
+  {
+    "id": 3,
+    "name": "부산 해운대",
+    "country": "한국",
+    "description": "넓은 백사장과 아름다운 바다 풍경을 자랑하는 대표적인 해변",
+    "recommendation": 95
+  },
+  {
+    "id": 4,
+    "name": "전주 한옥마을",
+    "country": "한국",
+    "description": "전통 한옥과 한복 체험, 다양한 한국 음식을 즐길 수 있는 관광지",
+    "recommendation": 94
+  },
+  {
+    "id": 5,
+    "name": "남산서울타워",
+    "country": "한국",
+    "description": "서울의 아름다운 전경과 화려한 야경을 감상할 수 있는 랜드마크",
+    "recommendation": 92
+  },
+  {
+    "id": 6,
+    "name": "도쿄",
+    "country": "일본",
+    "description": "현대적인 도시 풍경과 전통문화, 쇼핑과 먹거리를 즐길 수 있는 수도",
+    "recommendation": 99
+  },
+  {
+    "id": 7,
+    "name": "오사카",
+    "country": "일본",
+    "description": "다양한 길거리 음식과 활기찬 쇼핑 거리가 유명한 관광도시",
+    "recommendation": 98
+  },
+  {
+    "id": 8,
+    "name": "교토",
+    "country": "일본",
+    "description": "아름다운 사찰과 전통 거리에서 일본의 옛 문화를 경험할 수 있는 도시",
+    "recommendation": 97
+  },
+  {
+    "id": 9,
+    "name": "후지산",
+    "country": "일본",
+    "description": "일본을 대표하는 웅장한 화산으로 아름다운 자연경관을 자랑하는 명소",
+    "recommendation": 96
+  },
+  {
+    "id": 10,
+    "name": "삿포로",
+    "country": "일본",
+    "description": "눈 축제와 겨울 풍경, 다양한 먹거리로 유명한 일본 북부 도시",
+    "recommendation": 93
+  },
+  {
+    "id": 11,
+    "name": "상하이",
+    "country": "중국",
+    "description": "화려한 고층 빌딩과 전통적인 건축물이 조화를 이루는 대도시",
+    "recommendation": 96
+  },
+  {
+    "id": 12,
+    "name": "만리장성",
+    "country": "중국",
+    "description": "중국의 오랜 역사와 문화를 간직한 세계적인 성벽 유적",
+    "recommendation": 99
+  },
+  {
+    "id": 13,
+    "name": "장가계",
+    "country": "중국",
+    "description": "독특한 바위 봉우리와 웅장한 산악 풍경이 아름다운 자연 관광지",
+    "recommendation": 98
+  },
+  {
+    "id": 14,
+    "name": "방콕",
+    "country": "태국",
+    "description": "화려한 사원과 야시장, 다양한 길거리 음식을 즐길 수 있는 도시",
+    "recommendation": 97
+  },
+  {
+    "id": 15,
+    "name": "푸껫",
+    "country": "태국",
+    "description": "에메랄드빛 바다와 아름다운 해변에서 휴양을 즐길 수 있는 섬",
+    "recommendation": 96
+  },
+  {
+    "id": 16,
+    "name": "다낭",
+    "country": "베트남",
+    "description": "아름다운 해변과 저렴한 먹거리, 고급 리조트가 매력적인 휴양도시",
+    "recommendation": 98
+  },
+  {
+    "id": 17,
+    "name": "하노이",
+    "country": "베트남",
+    "description": "전통적인 거리와 호수, 베트남의 역사와 문화를 느낄 수 있는 수도",
+    "recommendation": 94
+  },
+  {
+    "id": 18,
+    "name": "호이안",
+    "country": "베트남",
+    "description": "알록달록한 등불과 고풍스러운 건축물이 아름다운 역사 도시",
+    "recommendation": 97
+  },
+  {
+    "id": 19,
+    "name": "발리",
+    "country": "인도네시아",
+    "description": "열대 해변과 아름다운 사원, 울창한 정글을 즐길 수 있는 휴양지",
+    "recommendation": 99
+  },
+  {
+    "id": 20,
+    "name": "보라카이",
+    "country": "필리핀",
+    "description": "새하얀 백사장과 맑고 투명한 바다로 유명한 대표적인 휴양 섬",
+    "recommendation": 98
+  },
+  {
+    "id": 21,
+    "name": "싱가포르",
+    "country": "싱가포르",
+    "description": "미래적인 건축물과 깨끗한 거리, 다양한 문화가 공존하는 도시",
+    "recommendation": 99
+  },
+  {
+    "id": 22,
+    "name": "코타키나발루",
+    "country": "말레이시아",
+    "description": "아름다운 석양과 푸른 바다, 열대 자연을 만날 수 있는 휴양지",
+    "recommendation": 95
+  },
+  {
+    "id": 23,
+    "name": "파리",
+    "country": "프랑스",
+    "description": "에펠탑과 루브르 박물관, 낭만적인 거리가 유명한 예술의 도시",
+    "recommendation": 100
+  },
+  {
+    "id": 24,
+    "name": "니스",
+    "country": "프랑스",
+    "description": "지중해의 푸른 바다와 아름다운 해안 산책로가 있는 휴양도시",
+    "recommendation": 94
+  },
+  {
+    "id": 25,
+    "name": "로마",
+    "country": "이탈리아",
+    "description": "콜로세움과 고대 유적을 통해 로마 제국의 역사를 느낄 수 있는 도시",
+    "recommendation": 100
+  },
+  {
+    "id": 26,
+    "name": "베네치아",
+    "country": "이탈리아",
+    "description": "운하와 곤돌라, 아름다운 수상 건축물이 유명한 낭만적인 도시",
+    "recommendation": 99
+  },
+  {
+    "id": 27,
+    "name": "피렌체",
+    "country": "이탈리아",
+    "description": "르네상스 예술과 아름다운 성당, 미술관을 만날 수 있는 도시",
+    "recommendation": 97
+  },
+  {
+    "id": 28,
+    "name": "산토리니",
+    "country": "그리스",
+    "description": "하얀 건물과 파란 지붕, 아름다운 에게해 풍경이 매력적인 섬",
+    "recommendation": 100
+  },
+  {
+    "id": 29,
+    "name": "바르셀로나",
+    "country": "스페인",
+    "description": "가우디의 독특한 건축물과 아름다운 해변을 즐길 수 있는 도시",
+    "recommendation": 99
+  },
+  {
+    "id": 30,
+    "name": "리스본",
+    "country": "포르투갈",
+    "description": "언덕 위의 골목과 노란 트램, 아름다운 강변 풍경이 있는 도시",
+    "recommendation": 96
+  },
+  {
+    "id": 31,
+    "name": "런던",
+    "country": "영국",
+    "description": "빅벤과 버킹엄궁전, 다양한 박물관과 쇼핑 명소가 있는 수도",
+    "recommendation": 99
+  },
+  {
+    "id": 32,
+    "name": "인터라켄",
+    "country": "스위스",
+    "description": "웅장한 알프스 산맥과 맑은 호수, 아름다운 자연을 즐길 수 있는 도시",
+    "recommendation": 99
+  },
+  {
+    "id": 33,
+    "name": "체르마트",
+    "country": "스위스",
+    "description": "마터호른의 웅장한 봉우리와 그림 같은 산악 마을이 있는 곳",
+    "recommendation": 98
+  },
+  {
+    "id": 34,
+    "name": "프라하",
+    "country": "체코",
+    "description": "중세 시대의 건축물과 고풍스러운 거리가 아름다운 역사 도시",
+    "recommendation": 97
+  },
+  {
+    "id": 35,
+    "name": "부다페스트",
+    "country": "헝가리",
+    "description": "다뉴브강과 웅장한 국회의사당, 아름다운 야경으로 유명한 도시",
+    "recommendation": 96
+  },
+  {
+    "id": 36,
+    "name": "암스테르담",
+    "country": "네덜란드",
+    "description": "운하와 자전거 도로, 예술적인 건축물이 매력적인 도시",
+    "recommendation": 97
+  },
+  {
+    "id": 37,
+    "name": "뉴욕",
+    "country": "미국",
+    "description": "타임스스퀘어와 센트럴파크, 다양한 문화와 쇼핑을 즐길 수 있는 대도시",
+    "recommendation": 100
+  },
+  {
+    "id": 38,
+    "name": "로스앤젤레스",
+    "country": "미국",
+    "description": "할리우드와 아름다운 해변, 영화 산업의 중심지를 경험할 수 있는 도시",
+    "recommendation": 96
+  },
+  {
+    "id": 39,
+    "name": "그랜드캐니언",
+    "country": "미국",
+    "description": "웅장한 협곡과 자연의 경이로움을 감상할 수 있는 국립공원",
+    "recommendation": 100
+  },
+  {
+    "id": 40,
+    "name": "밴쿠버",
+    "country": "캐나다",
+    "description": "푸른 바다와 웅장한 산이 어우러진 자연 친화적인 도시",
+    "recommendation": 97
+  },
+  {
+    "id": 41,
+    "name": "밴프 국립공원",
+    "country": "캐나다",
+    "description": "에메랄드빛 호수와 로키산맥의 아름다운 풍경을 감상할 수 있는 곳",
+    "recommendation": 100
+  },
+  {
+    "id": 42,
+    "name": "칸쿤",
+    "country": "멕시코",
+    "description": "카리브해의 투명한 바다와 고급 리조트가 유명한 휴양지",
+    "recommendation": 99
+  },
+  {
+    "id": 43,
+    "name": "마추픽추",
+    "country": "페루",
+    "description": "안데스산맥에 자리한 잉카 문명의 신비로운 고대 유적",
+    "recommendation": 100
+  },
+  {
+    "id": 44,
+    "name": "시드니",
+    "country": "호주",
+    "description": "오페라하우스와 하버브리지, 아름다운 해변이 있는 대표적인 관광도시",
+    "recommendation": 99
+  },
+  {
+    "id": 45,
+    "name": "멜버른",
+    "country": "호주",
+    "description": "개성 있는 카페와 예술 거리, 세련된 도시 문화가 매력적인 곳",
+    "recommendation": 95
+  },
+  {
+    "id": 46,
+    "name": "퀸스타운",
+    "country": "뉴질랜드",
+    "description": "아름다운 호수와 산악 풍경, 다양한 야외 액티비티를 즐길 수 있는 도시",
+    "recommendation": 98
+  },
+  {
+    "id": 47,
+    "name": "카이로",
+    "country": "이집트",
+    "description": "피라미드와 스핑크스 등 고대 이집트 문명을 만날 수 있는 도시",
+    "recommendation": 97
+  },
+  {
+    "id": 48,
+    "name": "두바이",
+    "country": "아랍에미리트",
+    "description": "초고층 빌딩과 사막 투어, 화려한 쇼핑을 즐길 수 있는 도시",
+    "recommendation": 98
+  },
+  {
+    "id": 49,
+    "name": "카파도키아",
+    "country": "튀르키예",
+    "description": "독특한 기암괴석과 열기구 투어로 유명한 환상적인 자연 관광지",
+    "recommendation": 100
+  },
+  {
+    "id": 50,
+    "name": "몰디브",
+    "country": "몰디브",
+    "description": "투명한 바다와 수상 빌라, 프라이빗한 휴양을 즐길 수 있는 섬나라",
+    "recommendation": 100
+  },
+  {
+    "id": 51,
+    "name": "오키나와",
+    "country": "일본",
+    "description": "에메랄드빛 바다와 아름다운 산호초, 독특한 류큐 문화를 즐길 수 있는 섬",
+    "recommendation": 96
+  },
+  {
+    "id": 52,
+    "name": "나라 공원",
+    "country": "일본",
+    "description": "자유롭게 돌아다니는 사슴들과 일본 전통 사찰을 만날 수 있는 공원",
+    "recommendation": 94
+  },
+  {
+    "id": 53,
+    "name": "히로시마 평화기념공원",
+    "country": "일본",
+    "description": "역사적인 평화기념관과 원폭 돔을 통해 평화의 의미를 되새길 수 있는 장소",
+    "recommendation": 91
+  },
+  {
+    "id": 54,
+    "name": "아라시야마",
+    "country": "일본",
+    "description": "울창한 대나무 숲과 도게츠교가 아름다운 교토의 대표 자연 관광지",
+    "recommendation": 97
+  },
+  {
+    "id": 55,
+    "name": "유후인",
+    "country": "일본",
+    "description": "아기자기한 상점과 온천, 아름다운 긴린코 호수가 있는 휴양 마을",
+    "recommendation": 95
+  },
+  {
+    "id": 56,
+    "name": "홍콩 빅토리아 피크",
+    "country": "홍콩",
+    "description": "홍콩의 화려한 고층 빌딩과 빅토리아항의 야경을 감상할 수 있는 전망 명소",
+    "recommendation": 98
+  },
+  {
+    "id": 57,
+    "name": "마카오 세나도 광장",
+    "country": "마카오",
+    "description": "유럽풍 건축물과 화려한 타일 바닥이 인상적인 역사적인 광장",
+    "recommendation": 93
+  },
+  {
+    "id": 58,
+    "name": "타이베이 101",
+    "country": "대만",
+    "description": "대만의 대표적인 초고층 빌딩으로 도시 전체의 전망을 감상할 수 있는 명소",
+    "recommendation": 96
+  },
+  {
+    "id": 59,
+    "name": "지우펀",
+    "country": "대만",
+    "description": "붉은 홍등과 좁은 골목길, 산과 바다가 어우러진 아름다운 마을",
+    "recommendation": 98
+  },
+  {
+    "id": 60,
+    "name": "타로코 협곡",
+    "country": "대만",
+    "description": "웅장한 대리석 절벽과 계곡이 만들어낸 독특한 자연경관을 감상할 수 있는 곳",
+    "recommendation": 95
+  },
+  {
+    "id": 61,
+    "name": "앙코르와트",
+    "country": "캄보디아",
+    "description": "웅장한 석조 사원과 정교한 조각으로 유명한 세계적인 고대 유적",
+    "recommendation": 100
+  },
+  {
+    "id": 62,
+    "name": "루앙프라방",
+    "country": "라오스",
+    "description": "전통 사원과 메콩강의 풍경, 여유로운 분위기를 즐길 수 있는 역사 도시",
+    "recommendation": 94
+  },
+  {
+    "id": 63,
+    "name": "꽝시 폭포",
+    "country": "라오스",
+    "description": "에메랄드빛 물웅덩이와 계단식 폭포가 아름다운 자연 관광지",
+    "recommendation": 97
+  },
+  {
+    "id": 64,
+    "name": "바간",
+    "country": "미얀마",
+    "description": "넓은 평원에 수많은 고대 불교 사원이 펼쳐진 역사적인 유적지",
+    "recommendation": 96
+  },
+  {
+    "id": 65,
+    "name": "페낭 조지타운",
+    "country": "말레이시아",
+    "description": "다채로운 벽화와 식민지 시대 건축물, 다양한 길거리 음식이 유명한 도시",
+    "recommendation": 95
+  },
+  {
+    "id": 66,
+    "name": "카파도키아 열기구 명소",
+    "country": "튀르키예",
+    "description": "기암괴석으로 이루어진 독특한 지형 위에서 열기구 풍경을 감상할 수 있는 곳",
+    "recommendation": 99
+  },
+  {
+    "id": 67,
+    "name": "파묵칼레",
+    "country": "튀르키예",
+    "description": "새하얀 석회붕과 온천수가 만들어낸 독특하고 신비로운 자연경관",
+    "recommendation": 98
+  },
+  {
+    "id": 68,
+    "name": "에페소스",
+    "country": "튀르키예",
+    "description": "고대 로마 시대의 도서관과 원형극장이 잘 보존된 역사 유적지",
+    "recommendation": 94
+  },
+  {
+    "id": 69,
+    "name": "알함브라 궁전",
+    "country": "스페인",
+    "description": "이슬람 건축의 섬세한 장식과 아름다운 정원이 돋보이는 궁전",
+    "recommendation": 99
+  },
+  {
+    "id": 70,
+    "name": "톨레도",
+    "country": "스페인",
+    "description": "중세 시대의 골목과 역사적인 성당이 잘 보존된 아름다운 도시",
+    "recommendation": 93
+  },
+  {
+    "id": 71,
+    "name": "모나코 몬테카를로",
+    "country": "모나코",
+    "description": "고급 요트와 화려한 카지노, 지중해의 아름다운 해안 풍경이 유명한 도시",
+    "recommendation": 95
+  },
+  {
+    "id": 72,
+    "name": "노이슈반슈타인 성",
+    "country": "독일",
+    "description": "알프스 산맥을 배경으로 동화 속 풍경처럼 자리한 아름다운 성",
+    "recommendation": 100
+  },
+  {
+    "id": 73,
+    "name": "브란덴부르크 문",
+    "country": "독일",
+    "description": "독일의 역사와 통일을 상징하는 베를린의 대표적인 랜드마크",
+    "recommendation": 94
+  },
+  {
+    "id": 74,
+    "name": "쾰른 대성당",
+    "country": "독일",
+    "description": "웅장한 고딕 양식과 정교한 건축미를 자랑하는 세계적인 성당",
+    "recommendation": 96
+  },
+  {
+    "id": 75,
+    "name": "플리트비체 호수 국립공원",
+    "country": "크로아티아",
+    "description": "에메랄드빛 호수와 수많은 폭포가 어우러진 아름다운 자연공원",
+    "recommendation": 100
+  },
+  {
+    "id": 76,
+    "name": "블레드 호수",
+    "country": "슬로베니아",
+    "description": "호수 한가운데 작은 섬과 성이 자리한 그림 같은 자연 관광지",
+    "recommendation": 99
+  },
+  {
+    "id": 77,
+    "name": "브라티슬라바 성",
+    "country": "슬로바키아",
+    "description": "다뉴브강을 내려다보는 언덕 위에 자리한 역사적인 성",
+    "recommendation": 90
+  },
+  {
+    "id": 78,
+    "name": "블루라군",
+    "country": "아이슬란드",
+    "description": "푸른 온천수와 화산 지형이 어우러진 세계적으로 유명한 온천 명소",
+    "recommendation": 98
+  },
+  {
+    "id": 79,
+    "name": "게이랑에르 피오르",
+    "country": "노르웨이",
+    "description": "웅장한 절벽과 계단식 폭포, 푸른 바다가 어우러진 자연 절경",
+    "recommendation": 100
+  },
+  {
+    "id": 80,
+    "name": "로포텐 제도",
+    "country": "노르웨이",
+    "description": "아름다운 어촌 마을과 험준한 산맥, 오로라를 감상할 수 있는 섬 지역",
+    "recommendation": 98
+  },
+  {
+    "id": 81,
+    "name": "티티카카 호수",
+    "country": "페루",
+    "description": "안데스산맥 고지대에 위치한 거대한 호수로 독특한 전통 문화를 만날 수 있는 곳",
+    "recommendation": 93
+  },
+  {
+    "id": 82,
+    "name": "살라르 데 우유니",
+    "country": "볼리비아",
+    "description": "비가 내린 뒤 거대한 거울처럼 하늘을 비추는 세계 최대 규모의 소금사막",
+    "recommendation": 100
+  },
+  {
+    "id": 83,
+    "name": "토레스 델 파이네",
+    "country": "칠레",
+    "description": "웅장한 바위산과 빙하, 청록색 호수가 어우러진 국립공원",
+    "recommendation": 99
+  },
+  {
+    "id": 84,
+    "name": "이스터섬",
+    "country": "칠레",
+    "description": "거대한 모아이 석상과 독특한 폴리네시아 문화를 만날 수 있는 섬",
+    "recommendation": 96
+  },
+  {
+    "id": 85,
+    "name": "이과수 폭포",
+    "country": "아르헨티나",
+    "description": "수많은 폭포가 거대한 물줄기를 이루는 세계적인 자연 명소",
+    "recommendation": 100
+  },
+  {
+    "id": 86,
+    "name": "우수아이아",
+    "country": "아르헨티나",
+    "description": "산과 바다가 어우러진 세계 최남단 도시 중 하나로 남극 여행의 관문",
+    "recommendation": 95
+  },
+  {
+    "id": 87,
+    "name": "페트라",
+    "country": "요르단",
+    "description": "붉은 사암 절벽을 깎아 만든 고대 나바테아 왕국의 신비로운 유적",
+    "recommendation": 100
+  },
+  {
+    "id": 88,
+    "name": "와디럼",
+    "country": "요르단",
+    "description": "붉은 사막과 거대한 바위산이 어우러진 이색적인 사막 관광지",
+    "recommendation": 98
+  },
+  {
+    "id": 89,
+    "name": "셰이크 자이드 그랜드 모스크",
+    "country": "아랍에미리트",
+    "description": "하얀 대리석과 화려한 장식이 돋보이는 웅장한 이슬람 사원",
+    "recommendation": 97
+  },
+  {
+    "id": 90,
+    "name": "빅토리아 폭포",
+    "country": "잠비아",
+    "description": "거대한 물줄기와 물안개가 장관을 이루는 세계적인 폭포",
+    "recommendation": 99
+  },
+  {
+    "id": 91,
+    "name": "세렝게티 국립공원",
+    "country": "탄자니아",
+    "description": "사자와 코끼리, 기린 등 다양한 야생동물을 관찰할 수 있는 사파리 명소",
+    "recommendation": 100
+  },
+  {
+    "id": 92,
+    "name": "마사이마라 국립보호구",
+    "country": "케냐",
+    "description": "대규모 야생동물 이동과 드넓은 초원이 유명한 아프리카 사파리 관광지",
+    "recommendation": 99
+  },
+  {
+    "id": 93,
+    "name": "테이블마운틴",
+    "country": "남아프리카공화국",
+    "description": "케이프타운을 내려다보는 평평한 정상의 독특한 산악 명소",
+    "recommendation": 96
+  },
+  {
+    "id": 94,
+    "name": "바오밥 거리",
+    "country": "마다가스카르",
+    "description": "거대한 바오밥나무들이 길게 늘어서 있는 이색적인 자연 명소",
+    "recommendation": 98
+  },
+  {
+    "id": 95,
+    "name": "모레노 빙하",
+    "country": "아르헨티나",
+    "description": "거대한 푸른 얼음 절벽과 빙하의 장엄한 모습을 가까이에서 볼 수 있는 곳",
+    "recommendation": 97
+  },
+  {
+    "id": 96,
+    "name": "와이키키 해변",
+    "country": "미국",
+    "description": "하와이의 푸른 바다와 서핑, 열대 분위기를 즐길 수 있는 대표 해변",
+    "recommendation": 99
+  },
+  {
+    "id": 97,
+    "name": "요세미티 국립공원",
+    "country": "미국",
+    "description": "거대한 화강암 절벽과 폭포, 울창한 숲이 아름다운 자연공원",
+    "recommendation": 100
+  },
+  {
+    "id": 98,
+    "name": "나이아가라 폭포",
+    "country": "캐나다",
+    "description": "엄청난 규모의 물줄기와 웅장한 자연경관을 자랑하는 세계적인 폭포",
+    "recommendation": 99
+  },
+  {
+    "id": 99,
+    "name": "테카포 호수",
+    "country": "뉴질랜드",
+    "description": "맑고 푸른 호수와 밤하늘의 별빛을 감상할 수 있는 아름다운 관광지",
+    "recommendation": 98
+  },
+  {
+    "id": 100,
+    "name": "보라보라섬",
+    "country": "프랑스령 폴리네시아",
+    "description": "투명한 라군과 산호초, 수상 방갈로가 아름다운 남태평양의 휴양지",
+    "recommendation": 100
+  }
+]
