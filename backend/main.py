@@ -1,7 +1,7 @@
 ## 역할 : 클라이언트로 부터 요청이 오면 요청을 받고 응답해 주는 역할..
 
 from fastapi import FastAPI
-from service import data
+from service import data, rag_menus
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 # from pydantic import Field
@@ -123,3 +123,16 @@ def update_recommend(id:int):
     return{
         "message":"ok"
     }
+
+# 클라이언트가 채팅을 요청하면 응답해 주는 서비스 개발 예정
+class ChatRequest(BaseModel):
+    question:str
+
+@a.post("/chat")
+def chatting(chatRequest: ChatRequest):
+    # print(chatRequest.question)
+    results = rag_menus.rag_menus_service(chatRequest.question)
+    return {
+        "answer": results
+    }
+    
