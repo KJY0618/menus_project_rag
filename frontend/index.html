@@ -143,6 +143,134 @@
       max-width: 400px;
     }
   </style>
+  <style>
+    /* 전체 화면 레이아웃 */
+    .app-layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+      min-height: 90vh;
+    }
+
+    /* 오른쪽 메뉴 관리 영역 */
+    .main-area {
+      min-width: 0;
+      padding: 10px;
+    }
+
+    /* 왼쪽 채팅 영역 */
+    .chat-sidebar {
+      display: flex;
+      flex-direction: column;
+      height: 85vh;
+      min-height: 500px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      overflow: hidden;
+      position: sticky;
+      top: 20px;
+    }
+
+    .chat-sidebar h2 {
+      font-size: 20px;
+      padding: 15px;
+      margin: 0;
+      background: #007bff;
+      color: white;
+    }
+
+    /* 채팅 메시지 영역 */
+    .chat-messages {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #f8f9fa;
+    }
+
+    /* 사용자 메시지 */
+    .user-message {
+      align-self: flex-end;
+      max-width: 85%;
+      padding: 10px 13px;
+      background: #007bff;
+      color: white;
+      border-radius: 12px 12px 0 12px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    /* AI 메시지 */
+    .bot-message {
+      align-self: flex-start;
+      max-width: 90%;
+      padding: 10px 13px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 12px 12px 12px 0;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      line-height: 1.5;
+    }
+
+    /* 출처 표시 */
+    .chat-sources {
+      font-size: 12px;
+      color: #666;
+      margin-top: 8px;
+      border-top: 1px solid #eee;
+      padding-top: 6px;
+    }
+
+    /* 채팅 입력 영역 */
+    .chat-input-area {
+      display: flex;
+      gap: 8px;
+      padding: 12px;
+      border-top: 1px solid #ddd;
+    }
+
+    .chat-input-area textarea {
+      flex: 1;
+      resize: none;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+
+    .chat-input-area button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .chat-input-area button:disabled {
+      background: #999;
+      cursor: not-allowed;
+    }
+
+    /* 모바일 화면 */
+    @media (max-width: 800px) {
+      .app-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .chat-sidebar {
+        height: 400px;
+        min-height: 400px;
+        position: static;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -156,6 +284,163 @@
     <button id="nav-add" onclick="renderAddMenu()">메뉴등록</button>
   </nav>
 
+  <div class="app-layout">
+
+    <!-- 왼쪽 AI 채팅창 -->
+    <aside class="chat-sidebar">
+
+      <h2>🤖 AI 메뉴 도우미</h2>
+
+      <div id="chat-messages" class="chat-messages">
+        <div class="bot-message">
+          안녕하세요! 음식 메뉴에 관해 궁금한 점을 질문해 주세요.
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <textarea id="chat-input" placeholder="메뉴에 관해 질문하세요..." rows="2"></textarea>
+
+        <button type="button" id="chat-send" onclick="sendMessage()">
+          전송
+        </button>
+      </div>
+
+    </aside>
+
+    <script>
+      // ========================================
+      // RAG AI 채팅 기능
+      // ========================================
+
+      // 백엔드 API 주소
+      const CHAT_API_URL = "http://127.0.0.1:8000/chat";
+
+
+      // 이전 대화 내용 저장
+      let chatHistory = [];
+
+
+      // 채팅 메시지 출력
+      function addChatMessage(message, type) {
+        const chatMessages = document.getElementById("chat-messages");
+        const messageDiv = document.createElement("div");
+        messageDiv.className = type === "user" ? "user-message" : "bot-message";
+        const textDiv = document.createElement("div");
+        textDiv.textContent = message;
+        messageDiv.appendChild(textDiv);
+
+        // 참고한 음식 데이터 출력
+        // if (sources.length > 0) {
+        //   const sourceDiv = document.createElement("div");
+        //   sourceDiv.className = "chat-sources";
+        //   sourceDiv.textContent = "📚 참고 메뉴: " + sources.join(", ");
+        //   messageDiv.appendChild(sourceDiv);
+        // }
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+      // 로딩 메시지
+      function showLoading() {
+        const chatMessages = document.getElementById("chat-messages");
+        const loadingDiv = document.createElement("div");
+        loadingDiv.id = "chat-loading";
+        loadingDiv.className = "bot-message";
+        loadingDiv.textContent = "🤖 답변을 생각하고 있습니다...";
+        chatMessages.appendChild(loadingDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+      // 로딩 제거
+      function hideLoading() {
+
+        const loadingDiv = document.getElementById("chat-loading");
+
+        if (loadingDiv) {
+          loadingDiv.remove();
+        }
+      }
+      // 질문 전송
+      async function sendMessage() {
+
+        const input = document.getElementById("chat-input");  // 사용자가 입력할 질문
+        const sendButton = document.getElementById("chat-send"); // 버튼
+        const question = input.value.trim(); // 사용자가 질문한 값을 가져오고 공백 제거
+
+        if (!question) { // 사용자 질의가 없으면 리턴
+          return;
+        }
+
+        // 사용자 질문 출력
+        addChatMessage(question, "user"); // 질문과 user라는 문자열을 인자값을 전달
+        input.value = "";   // 대화창 초기화
+        sendButton.disabled = true;   // 버튼 비활성화 
+        showLoading();
+
+        try {
+
+          // FastAPI 서버에 질문 전달
+          const response = await fetch(CHAT_API_URL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              question: question
+              //history: chatHistory
+            })
+          });
+
+          if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(
+              errorData.detail || "서버 오류가 발생했습니다."
+            );
+          }
+
+          // 서버 응답 JSON
+          const result = await response.json();
+
+          hideLoading();
+
+          // AI 답변 출력
+          addChatMessage(
+            result.answer,
+            "bot"
+            // result.sources || []
+          );
+          // 대화 이력 저장
+          chatHistory.push({
+            role: "user",
+            content: question
+          });
+          chatHistory.push({
+            role: "assistant",
+            content: result.answer
+          });
+          // 최근 대화 6개만 유지
+          if (chatHistory.length > 6) {
+            chatHistory = chatHistory.slice(-6);
+          }
+        } catch (error) {
+          hideLoading();
+          addChatMessage(
+            "오류가 발생했습니다.\n" + error.message,
+            "bot"
+          );
+          console.error(error);
+
+        } finally {
+          sendButton.disabled = false;
+          input.focus();
+        }
+      }
+      // Enter 키로 질문 전송
+      document.getElementById("chat-input").addEventListener("keydown", function (event) {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
+          sendMessage();
+        }
+      });
+    </script>
 
     <div id="content"></div>
 
@@ -294,12 +579,12 @@
       }
       //------------------------------------------------------------------------
 
-      async function recommend(id){
-        if(confirm(id+' 추천할까요?')){
+      async function recommend(id) {
+        if (confirm(id + ' 추천할까요?')) {
           //서버에게 조회수 올려줘 요청
           await recommendMenu(id)
           renderAllMenu();
-        }else{
+        } else {
           return
         }
       }
@@ -472,4 +757,5 @@
       }
     </script>
 </body>
+
 </html>

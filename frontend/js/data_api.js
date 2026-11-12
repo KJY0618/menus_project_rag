@@ -3,8 +3,8 @@
 //서버에게 모든 메뉴다 주세요..
 // 이것을 수정에 이용한다면? 서버는 모든 정보를 줄 것이고, 클라이언트는 다시 찾아야 한다..
 // 서버나 클라이언트 모두에게 좋은 방법은 아니죠..
-API_SERVER = "https://menus-project-back-5kz6.onrender.com"
-//API_SERVER = "http://127.0.0.1:8000"
+// API_SERVER = "https://menus-project-back-5kz6.onrender.com"
+API_SERVER = "http://127.0.0.1:8000"
 
 
 async function getAllMenus() {
