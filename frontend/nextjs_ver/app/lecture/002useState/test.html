@@ -1,0 +1,22 @@
+<!-- useState를 쓰는 이유를 일반 html과 javaScript에서 이해를 위해 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="aa"></div>
+    <button onclick="aaa()">버튼</button>
+</body>
+<script>
+    let num = 50;
+    const d = document.getElementById("aa") 
+    d.innerText = num
+    function aaa() {
+        num = num + 1;
+        d.innerText = num
+    }
+</script>
+</html>
