@@ -19,7 +19,7 @@ PATH_CHROMA = "./chroma_db/menus_db"
 # 모델을 선정하고 파라미터 값을 설정할 수 있다.
 llm = ChatGoogleGenerativeAI(model = "gemini-3.5-flash", 
                              temperature= 0.3,
-                             max_output_tokens = 1024)
+                             max_output_tokens = 4096)
 
 embeddings = HuggingFaceEmbeddings(
     model_name="jhgan/ko-sroberta-multitask",
@@ -87,9 +87,11 @@ def loadVectorDB():
     )
     return vectorstore
 
+vectorstore = loadVectorDB()
+
 ## 거리가 짧은 데이터를 검색해 오는 함수 정의
 def retrieval_docs(query, k=3):
-    results = loadVectorDB().similarity_search(query, k=k)
+    results = vectorstore.similarity_search(query, k=k)
     return results
 
 ## 보강 - 검색한 정보를 모델에 입력하기 위해 보강한다
@@ -99,7 +101,7 @@ def format_docs(docs):
         data = data + "\n\n" + doc_data.page_content
     return data
 
-## 질의를 받고 rag로 응답 문장을 만들어서 리턴하는 함수
+# 질의를 받고 rag로 응답 문장을 만들어서 리턴하는 함수
 def rag_menus_service(query):
     result = rag_chain.invoke({'usequery':query})
     return result

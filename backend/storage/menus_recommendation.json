@@ -677,5 +677,17 @@
         "calories": 11,
         "description": "11",
         "recommendation": 1
+    },
+    {
+        "id": 103,
+        "name": "육회",
+        "calories": 500,
+        "description": "정말 맛있는 육회입니다"
+    },
+    {
+        "id": 104,
+        "name": "치즈돈까스",
+        "calories": 1000,
+        "description": "신상 메뉴입니다.."
     }
 ]
